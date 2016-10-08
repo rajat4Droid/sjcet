@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BRJP</title>
+    <link rel="stylesheet" href="../vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <script src="../vendor/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="../vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="form.css" type="text/css" /> </head>
+
+<body class="login">
+    <!-- header starts here -->
+    <div id="facebook-Bar">
+        <div id="facebook-Frame">
+            <div id="logo"> <a href="Logo MNC Network.jpg">Job.com</a> </div>
+            <div id="header-main-right">
+                <div class="header-main-right-nav" id="header-main-right-nav">
+                    <form method="post" action="" id="login_form" name="login_form">
+                        <table border="0" style="border:none">
+                            <tr>
+                                <td>
+                                    <input type="text" tabindex="1" id="username" placeholder="Username" name="username" class="inputtext radius1" value=""> </td>
+                                <td>
+                                    <input type="password" tabindex="2" id="pass" placeholder="Password" name="pass" class="inputtext radius1"> </td>
+                                <td>
+                                    <input type="submit" class="fbbutton" name="login" value="Login" /> </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input id="persist_box" type="checkbox" name="persistent" value="1" checked="1" /> <span style="color:#ccc;">Keep me logged in</span></label>
+                                </td>
+                                <td>
+                                    <label><a href="" style="color:#ccc; text-decoration:none" onClick="forgot();">forgot your password?</a></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header ends here -->
+    <div class="loginbox radius">
+        <h2 style="color:white; text-align:center;">Welcome to Job.com</h2>
+        <div class="loginboxinner radius">
+            <div class="loginheader">
+                <h4 class="title">Register for jobs here.</h4> </div>
+            <!--loginheader-->
+            <div class="loginform">
+                <form id="login" name=f1 action="" method="post" onSubmit="return doc();">
+                    <p>
+                        <input type="text" id="username" name="username" required placeholder="Username" value="" class="radius" /> </p>
+                    <p>
+                        <input type="text" id="email" name="email" required placeholder="Your Email" value="" class="radius" /> </p>
+                    <p>
+                        <input type="password" id="password" name="npassword" required placeholder="New Password" class="radius" /> </p>
+                    <p>
+                        <input type="password" id="password" name="cpassword" required placeholder="Confirm Password" class="radius" /> </p>
+                    <p>
+                        <input type="text" id="mobilenumber" name="mobilenumber" required placeholder="Mobile Number" class="radius" /> </p>
+                    <p>
+                        <input type="submit" class="radiustitle" value="Proceed for signup" name="submit"> </p>
+                </form>
+            </div>
+            <!--loginform-->
+        </div>
+        <!--loginboxinner-->
+    </div>
+    <!--loginbox-->
+    <script>
+        function forgot() {
+            alert("Contact admininstrator for changing password");
+        }
+
+        function doc() {
+            var fn, mn, ln, npass, cpass, mail, dot, atrat, pwd, mob;
+            fn = document.f1.username.value;
+            npass = document.f1.npassword.value;
+            cpass = document.f1.cpassword.value;
+            mob = document.f1.mobilenumber.value;
+            mail = document.f1.email.value;
+            dot = mail.indexOf(".");
+            atrat = mail.indexOf("@");
+            pwd = pass.length;
+            if (fn == "") {
+                alert("Enter your username");
+                return false;
+            }
+            else if (npass < 8 || npass > 16) {
+                alert("Password is less than 8 or more than 16 characters");
+                return false;
+            }
+            else if (npass != cpass) {
+                alert("Password does not match");
+                return false;
+            }
+            else if (dot == -1 || atrat == -1) {
+                alert("Invalid Email Address");
+                return false;
+            }
+            else if (mob < 10 && mob > 10) {
+                alert("Invalid mobile number");
+                return false;
+            }
+            else {
+                alert("Registration Successfull");
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

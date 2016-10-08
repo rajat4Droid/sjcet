@@ -1,0 +1,30 @@
+<html>
+<head>
+<style>
+input[type=text]:focus {
+    background-color: lightblue;
+}
+</style>
+</head>
+<body bgcolor="grey">
+
+<br><br>
+<fieldset>
+<legend align="center">CREATE ACCOUNT</legend>
+<form  action="signup1.html" method="post"><br>
+USERNAME&nbsp;&nbsp;&nbsp;<input type="text" name=" "placeholder="ENTER FULL NAME" ><br><br><br>
+ADDRESS<textarea ROWS="2" COLS="25" name="add"></textarea><br><br><br>
+MOBILE_NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" mobile no=" "placeholder="ENTER MOBILE NUMBER"><br><br><br><br>
+CREATE PASSWORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" placeholder="ENTER PASSWORD"><br>
+CONFIRM PASSWORD&nbsp;&nbsp;&nbsp;<input type="password" name=c;password placeholder="CONFIRM PASSWORD"><br><br><br>
+
+<center><input type="submit" value="SIGNUP" onclick="validate()">
+</fieldset>
+<script>
+	function validate()
+	{
+		document.bgColor="grey";
+	}
+</script>
+</body>
+</html>
