@@ -35,7 +35,7 @@ input[type=text] {
 }
 
 body.login {
-    background-image: url(recruitment.jpg);
+    background-image: url(../images/recruitment.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
